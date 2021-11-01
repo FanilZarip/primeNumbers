@@ -5,11 +5,10 @@
 // Для n = 10 результат должен быть 2,3,5,7.
 // P.S. Код также должен легко модифицироваться для любых других интервалов.
 
-// let value = prompt('Введите число');
-
-function getPrimeNumbers(value) {
+// 7 Задача из темы про циклы (learnJavaScript)
+function getPrimeNumbers(startValue, endValue) {
 	let primeNums = '';
-	for (n = 1; n <= value; n++) {
+	for (n = startValue; n <= endValue; n++) {
 		for (i = 2; i <= n; i++) {
 			if (n % i == 0 && i != n) {
 				break;
@@ -20,17 +19,7 @@ function getPrimeNumbers(value) {
 			}
 		}
 	}
-	console.log(primeNums);
+	console.log(`Простые числа от ${startValue} до ${endValue}:`, primeNums);
 }
 
-getPrimeNumbers(26);
-
-// for (i = 2; i < n; i++) {
-// 	if (n % i == 0) {
-// 		break;
-// 	} else if (n % i != 0 && i != n - 1) {
-// 		continue;
-// 	} else {
-// 		console.log('Простое');
-// 	}
-// }
+getPrimeNumbers(9, 32);
